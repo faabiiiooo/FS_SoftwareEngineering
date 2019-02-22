@@ -68,6 +68,7 @@ public class CalculatorView extends Application {
 		this.btnEquals.setId("equals-button"); //Setzen einer eigenen CSS klasse, damit Blau färbung möglich
 		this.btnPlus.getStyleClass().add("calc-controls");
 		
+		calcPane.setId("calc-pane");
 				
 		calcPane.add(this.btnPlus, 3, 0);
 		calcPane.add(this.btnDel, 3, 1);

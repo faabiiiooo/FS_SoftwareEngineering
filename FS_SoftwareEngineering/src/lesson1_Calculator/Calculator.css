@@ -16,7 +16,7 @@
 .text-field {
 	-fx-alignment:center-right;
 	-fx-font-size:32px;
-	-fx-text-fill: black;
+	-fx-opacity:1.0;
 	
 }
 
