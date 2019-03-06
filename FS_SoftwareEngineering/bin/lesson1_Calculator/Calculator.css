@@ -1,0 +1,30 @@
+.button {
+	-fx-max-height: 1000px;
+  	-fx-max-width: 1000px;
+  	-fx-background-color:white;
+  	-fx-border-color:grey;
+  	-fx-border-width: 0.1px;
+  	-fx-padding:20;
+  	
+	
+}
+
+.button:hover {
+	-fx-background-color:lightgrey;
+}
+
+.text-field {
+	-fx-alignment:center-right;
+	-fx-font-size:32px;
+	-fx-opacity:1.0;
+	
+}
+
+.calc-controls{
+	-fx-text-fill:blue;
+}
+
+#equals-button{
+	-fx-text-fill:white;
+	-fx-background-color:#2d61f0;
+}
