@@ -29,20 +29,20 @@ public class Scan extends Thread {
 
     public void run() {
 
-       //synchronized (model.getPorts()) {
+       synchronized (model.getPorts()) {
             while (startPort < endPort) {
                 try (Socket s = new Socket()) {
 
                     s.connect(new InetSocketAddress("127.0.0.1", startPort),2);
 
-                    tempPorts.add(new CoPort(startPort,"open"));
+                    model.getPorts().add(new CoPort(startPort,"open"));
                     System.out.println(finished);
 
 
                 } catch (IOException e) {
                     System.out.println(ID+": StartPort: "+startPort);
                     //System.out.println(ID+": EndPort: "+endPort);
-                    tempPorts.add(new CoPort(startPort,"closed"));
+                    model.getPorts().add(new CoPort(startPort,"closed"));
                 } finally {
                     startPort++;
                     try {
@@ -56,7 +56,7 @@ public class Scan extends Thread {
            model.setFinished(this.ID, finished);
 
        }
-    //}
+    }
 
     public ObservableList<CoPort> getTempPorts(){return this.tempPorts; }
 }

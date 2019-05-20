@@ -49,7 +49,7 @@ public class PortProbe_Model {
            if(countFinished == 999){
                allFinished = true;
            }
-       }*/
+       }*//*
        for(Scan sc : scanners){
           try {
               sc.join();
@@ -58,7 +58,7 @@ public class PortProbe_Model {
 
           }
        }
-
+*/
 
 
     }
