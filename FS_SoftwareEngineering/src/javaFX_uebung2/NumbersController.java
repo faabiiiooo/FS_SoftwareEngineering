@@ -9,6 +9,7 @@ public class NumbersController {
         this.model = model;
         this.view = view;
 
+
         view.root.txtDecimal.textProperty().addListener(((observable, oldValue, newValue) -> {
             if(!newValue.matches("\\d+")){
                 view.root.btnBinary.setDisable(true);
